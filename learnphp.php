@@ -11,10 +11,84 @@
      ?>
     <?php
 
+// STRINGS
+  $randString = "            Random String      ";
+  // echo strlen("$randString") . "</br>";
+  // echo strlen(ltrim("$randString")) . "</br>";
+  // echo strlen(rtrim("$randString")) . "</br>";
+  // echo strlen(trim("$randString")) . "</br>";
+  //
+  // echo "The randString is $randString </br>";
+  // printf("The randomString is %s </br", $randString);
 
+  // $decimal = 2.51241234;
+  //
+  // printf('decimal num = %.2f </br>', $decimal);
+
+/*
+Other conversion codes for string numbs:
+b : integer to binary;
+c : integer to character;
+d : integer to float;
+o : integer to octal;
+s : integer to string;
+x : integer to hexadecimal;
+*/
+//
+// echo strtoupper($randString) . "</br>";
+// echo strtolower($randString) . "</br>";
+// echo ucfirst($randString) . "</br>";
+// echo lcfirst($randString) . "</br>";
+
+
+// $arrayForString = explode(' ', $randString, 2);
+// $stringToArray = implode(' ', $arrayForString);
+//
+// echo $arrayForString;
+// echo $stringToArray;
+
+//
+// $partOfString = substr("Random String", 0, 6);
+// echo $partOfString;
+
+
+$man = "Man";
+$manhole = "Manhole";
+
+// Compares the two strings
+echo strcmp($man, $manhole);
+// ignores case
+echo strcasecmp($man, $manhole);
+echo "</br>";
+
+echo "The String" . stristr($randString, "String");
+echo "</br>";
+
+echo "Loc of the String " . strpos($randString, "String");
+echo "</br>";
+
+
+$newString = str_replace("String", "Stuff", $randString);
+echo "$newString";
+
+// FUNCTIONS
+function addNumbers ($num1, $num2) {
+  return $num1 + $num2;
+}
+echo "</br>";
+
+
+echo "3 + 4 = " . addNumbers(3, 4);
 // ARRAYS
+// Array funcs
 
-  $bestFriends = array('Julia', 'Willow', "Ivy");
+// sort($yourArray) : sorts in ascending alphebetical order or
+//  if you add , SORT_NUMERIC or , SORT_STRING
+//  asort($yourArray) : sorts arrays with keys
+//  ksort($yourArray) : sorts by the key
+//  Put a 'r' in front of the above to sort in reverse order
+
+  // $bestFriends = array('Julia', 'Willow', "Ivy");
 
   // echo 'My Wife ' . $bestFriends[0];
   //
@@ -25,11 +99,25 @@
   //   echo $friend . ", ";
   // }
 
-  $customer = array('Name' => $usersName, 'Street' => $streetAddress, 'City'=> $cityAddress);
+  // $customers = array(array('Derek', '123 Main', '15212'),array('John', '12 Boobalo', '15222'),array('Boi', '1 49th', '15213'));
+  // for ($row = 0; $row < 3; $row++) {
+  //   for($col = 0; $col < 3; $col++) {
+  //     echo $customers[$row][$col] . ', ';
+  //   }
+  //   echo '</br>';
+  // }
 
-  foreach($customer as $key => $value) {
-    echo $key . " : " . $value . "</br>";
-  }
+  // $customer = array('Name' => $usersName, 'Street' => $streetAddress, 'City'=> $cityAddress);
+
+  // foreach($customer as $key => $value) {
+  //   echo $key . " : " . $value . "</br>";
+  // }
+
+  // combining array
+  // $bestFriends = $bestFriends + $customer;
+  // foreach($bestFriends as $friend) {
+  //   echo "$friend";
+  // }
 
 
 
